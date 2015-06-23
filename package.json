@@ -1,0 +1,45 @@
+{
+  "name": "grunt-svg-icon-font-png-fallback",
+  "version": "1.0.3",
+  "description": "a combination task of a few other tasks that generate and icon font from provided svgs and also generate the css assotiacted with them. Also provides an option for png fallbacks if @fontface is not supported.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshuajensen42/grunt-svg-icon-font-png-fallback"
+  },
+  "keywords": [
+    "grunt",
+    "svg",
+    "icon",
+    "font",
+    "png",
+    "fallback",
+    "fontface"
+  ],
+  "author": {
+    "name": "Joshua Jensen"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshuajensen42/grunt-svg-icon-font-png-fallback/issues"
+  },
+  "homepage": "https://github.com/joshuajensen42/grunt-svg-icon-font-png-fallback",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-exec": "^0.4.6",
+    "grunt-open": "^0.2.3",
+    "grunt-svg-modify-silent": "0.0.3",
+    "grunt-svg2png": "^0.2.5",
+    "grunt-webfont": "0.2.0"
+  },
+  "readme": "feature detection is required by default for applying either a fontface class or a legacy class to the html element. This way, if @fontface is available, the icon elements will use the generated icon font, otherwise if @fontface in not supported, the png background images will be used with thier default color values and sizes. For more complex png fallbacks you will need to define multiple namespaces for a given icon.\n\n",
+  "readmeFilename": "README.md",
+  "_id": "grunt-svg-icon-font-png-fallback@1.0.2",
+  "_shasum": "47c71bac3bead1182ca31636b8e51669376db6b3",
+  "_from": "grunt-svg-icon-font-png-fallback@>=1.0.2 <2.0.0"
+}

@@ -1,0 +1,29 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# config files
+/app/config.js
+/server/config.js
+
+# compiled output
+/dist
+/tmp
+/docs
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+*.DS_Store
+*.sqlite
+
+# grunt generated files
+icon-demo.html
+public/icons/png/
+app/styles/app.scss

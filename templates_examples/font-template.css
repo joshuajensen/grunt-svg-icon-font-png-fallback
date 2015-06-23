@@ -1,0 +1,32 @@
+/* Custom template */
+
+<% if (fontfaceStyles) { %>@font-face {
+	font-family:'icons';<% if (fontSrc1) { %>
+	src:<%= fontSrc1 %>;<% }%>
+	src:<%= fontSrc2 %>;
+	font-weight:normal;
+	font-style:normal;
+	}
+<% } %>
+
+
+<% if (iconsStyles) { %><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.fontface .icon-<%= glyphs[glyphIdx] %>:before { content:"\<%= (61696+glyphIdx).toString(16) %>"; }<% } %><% } %>
+<% if (iconsStyles) { %><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.fontface .icon-<%= glyphs[glyphIdx] %><% if(glyphIdx < glyphs.length - 1){%>,<% } %><% } %><% } %>{
+	font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+<% if (iconsStyles) { %><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.legacy .icon-<%= glyphs[glyphIdx] %>{ background-image:url(/icons/png/<%= glyphs[glyphIdx] %>.png);height: 42px;width: 42px;background-size: 100%;margin: 0 auto 0; }<% } %><% } %>
+
